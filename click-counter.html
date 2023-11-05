@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Click Counter</title>
+  <style>
+    body {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+
+      background: radial-gradient(circle at 50% 50%,#0200ff, #4793ff);
+      color: white;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    h1 {
+      text-transform: capitalize;
+      font-size: 3rem;
+    }
+
+    .button {
+      padding: .7rem 2rem;
+      font-size: 1.5rem;
+      color: white;
+      background: #0200ff;
+      border: 1px solid #4793ff;
+      transition: all .2s ease;
+    }
+    .button:hover {
+      background: #4793ff;
+    }
+
+    .button-container {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .button {
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1 id="counter-heading" class="counter">Anzahl Klicks: <span id="counter-number">0</span></h1>
+    <div class="button-container">
+      <button id="button-click" class="button">Klick!</button>
+      <button id="button-reset" class="button">Reset</button>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

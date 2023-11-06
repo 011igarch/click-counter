@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .main {
+    display: flex;
+    gap: 1rem;
+    margin: 0 auto;
+    max-width: 800px;
+  }
+  section {
+    flex: 1;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+  ul li {
+    padding: .8rem;
+    border: 1px solid silver;
+    border-radius: 5px;
+  }
+
+  input {
+    width: 100%;
+    padding: .5rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+
+  .checkbox {
+    display: flex;
+  }
+
+  button {
+    padding: 1rem;
+    border-radius: 5px;
+    background: rgb(66, 127, 232);
+    color: white;
+  }
+
+</style>
+<body>
+  <header class="header" role="banner">
+    <h1>Teilnehmerliste</h1>
+  </header>
+  <main class="main" role="main">
+    <section class="left" role="article">
+      <ul id="students-list" class="ul" role="list">
+        <!-- <li role="listitem list-group-item"><strong>Max Mustermann</strong></li>
+        <li role="listitem list-group-item"><strong>Max Musterfrau</strong></li>
+        <li role="listitem list-group-item"><strong>Moritz Mustermann</strong></li> -->
+      </ul>
+    </section>
+    <section class="right" role="article">
+      <form action="">
+        <div class="input">
+          <label for="nameInput">Teilnehmer hinzufügen:</label>
+          <input type="text" name="nameInput" id="nameInput" placeholder="Vor- und Nachname">
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" name="agbInput" id="agbInput" value="">
+          <label for="agbInput">AGB gesen und akzeptiert!</label>
+        </div>
+        <button id="addStudent">Teilnehmer zur Liste hinzufügen!</button>
+      </form>
+    </section>
+  </main>
+  
+  <script src="addremove.js" defer></script>
+</body>
+</html>
